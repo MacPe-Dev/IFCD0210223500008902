@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de divisas</title>
+    <link rel="stylesheet" href="Calculadoradivisas.css">
+    <script src="Calculadoradivisas.js"></script>
+</head>
+<body>
+    <h1>Conversor de divisas</h1>
+    <a href="#" onmouseover="cambiar();" onmouseout="volver();">Al pasar sobre mi cambiará la imagen</a>
+    <img src="media/img1.webp" width="250px" id="matrix">
+    <br><br>
+    <form name="Datos">
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" name="cantidad" id="cantidad" min="0" max="1000" value="0" onchange="conversion()">
+        <label for="convertir">Cambiar a:</label>
+        <select name="convertir" id="a" onchange="conversion()>
+            <option value="0">Elige moneda:</option>
+            <option value="1">Euro</option>
+            <option value="2">Dolar</option>
+        </select>
+        <h2 id="resultado"><br>Resultado:</h2>
+        <h3 id="info"><br></h3>
+    </form>
+</body>
+</html>
