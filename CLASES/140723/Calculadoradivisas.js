@@ -4,11 +4,7 @@ function cambiar(){
   function volver(){
     document.getElementById('matrix').src="media/img3.webp";
   }
-
 function conversion(){
-
-    
-    
     var valor=document.getElementById("cantidad").value;
     var a=document.getElementById("a").value;
     let euro=0.91; let dolar=1.10; var resultado=0;
