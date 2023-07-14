@@ -11,4 +11,3 @@ console.log("Ahora el valor de B " + b);
 
 var a = prompt("Introduce el valor de A ", "0");
 console.log("Valor de A "  + a);
-
