@@ -50,6 +50,7 @@
 //     calcular(n, 5);
 // }
 //Parámetros opcionales  toUpperCase() toLowerCase()
+//mes=="octubre" || mes=="Octubre" || mes=="OCTUBRE"
 function calcular(nro1, nro2, ver = false){
     if(ver == false){
     document.write("Sumar: " + (nro1+nro2) + "<br/>");
