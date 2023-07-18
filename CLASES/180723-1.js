@@ -49,7 +49,7 @@
 //     document.write(n + "<br/>");
 //     calcular(n, 5);
 // }
-//Parámetros opcionales
+//Parámetros opcionales  toUpperCase() toLowerCase()
 function calcular(nro1, nro2, ver = false){
     if(ver == false){
     document.write("Sumar: " + (nro1+nro2) + "<br/>");
