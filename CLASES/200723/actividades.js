@@ -75,7 +75,11 @@
 
 //Actividad9
 
+<<<<<<< HEAD
 // var numero = parseInt(prompt(`¿De que número quieres la tabla`, 1));
+=======
+// var numero = parseInt(prompt(`¿De que número quieres la tabla`));
+>>>>>>> 4739ce70a401e819a0225dc07be87d00ae0a4133
 // document.write("<h1>Tabla del "+numero+"</h1>");
 // for(var i = 1; i <=10; i++){
 // document.write(i+" x "+numero+" = "+(i*numero)+"<br/>");
@@ -89,10 +93,17 @@
 //         document.write(i+" x "+c+" = "+(i*c)+"<br/>");
 //         }
 // }
+<<<<<<< HEAD
 // n = 1;
 
 // Tablas según petición
 
+=======
+
+
+// Tablas según petición
+// var n = 1;
+>>>>>>> 4739ce70a401e819a0225dc07be87d00ae0a4133
 // do{
 //     for(var c = 1; c<= numero; c++){
 //         document.write("<h1>Tabla del "+c+"</h1>");
@@ -113,7 +124,12 @@
 
 // mes = (mes.toLowerCase());
 // switch(mes) {
+<<<<<<< HEAD
 //     case "enero": case "febrero":
+=======
+//     case "enero": 
+//     case "febrero":
+>>>>>>> 4739ce70a401e819a0225dc07be87d00ae0a4133
 //         pfinal = precio*0.80;
 //         document.write("El precio final es "+pfinal +"<br/>");
 //         break;
@@ -152,4 +168,13 @@
     // alert ("cancelado");
     // }else {
     // alert ("usuario incorrecto");
+<<<<<<< HEAD
     // }
+=======
+    // } eval()
+    function comprobar(){
+    let operador = document.getElementById("operadores").value;
+    resultado = eval(operador);
+    document.getElementById("resultado").innerHTML="Resultado: " + resultado;
+    }
+>>>>>>> 4739ce70a401e819a0225dc07be87d00ae0a4133

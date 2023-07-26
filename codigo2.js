@@ -9,11 +9,6 @@ console.log("Ahora el valor de A " + a);
 console.log("Ahora el valor de B " + b);
 
 
-    
-
-    
 
 
 
-    
- 
