@@ -19,7 +19,7 @@ document.getElementById("botonAñadir").addEventListener("click", function (even
     let telef = añadirtelef.value
 
     let van = true
-
+// Creando objetos
     // if (van == true) {
     //     alumnos.push({
     //         codigo: codigo,
@@ -33,7 +33,7 @@ document.getElementById("botonAñadir").addEventListener("click", function (even
     // }
     // if (alumnos.length==3){
     //     for(i=0; i<alumnos.length; i++){
-    // document.getElementById("listado").innerHTML = codigo[i] + nombre[i]+edad[i]+email[i]+telef[i]
+    // document.getElementById("listado").innerHTML = codigo + nombre+edad+email+telef
     //  }
     // }else{
     //         alert("Faltan Alumnos")
