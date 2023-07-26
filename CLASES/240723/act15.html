@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript For In</title>
+</head>
+<body>
+    <h1>Javascript For In</h1>
+ <!-- Actividad 15 -->
+    <script type="text/javascript">
+    var nombres = ["victor","pedro","carmen","irene","luis"];
+    for (name in nombres)
+        document.write(nombres[name]+"</br>");
+    </script>
+    <!-- Actividad 16 -->
+    <script type="text/javascript">
+        const matriz = [[1,2,3],[4,5,6],[7,8,9]];
+
+for (x=0;x<matriz.length;x++) {
+    text = ""
+    for (y=0;y<matriz[x].length;y++) {
+        text += matriz[x][y] + "\t";
+    }
+    console.log(text)
+}
+    </script>
+    
+    <br><br>
+    <hr>  
+</body>
+</html>
