@@ -1,0 +1,19 @@
+body{
+    background-color:cadetblue;
+    text-align: center;
+}
+.listado{
+    width: 50%;
+    margin: auto;
+}
+.encabezado{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+#totalalumnos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+}
