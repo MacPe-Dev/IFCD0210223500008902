@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1: #cdeae8;
+    --color2: #0d3f7c;
+    --color3: #00214A;
+    --color4: #04bbec;
+    --color5: #ea25b5;
+    --color6: #ff82f4;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    border: 1px solid var(--color3);
+}
+
+header img{
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 2px 5px 5px var(--color3);
+}
+header nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav button{
+    margin-left: 1em;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20%;
+    border: none;
+    background-color: var(--color4);
+    color: var(--color1);
+}
+
+button:hover{
+    background-color: var(--color3);
+}
+
+.infocontainer{
+    display: flex;
+    
+}
+.barracontainer{
+    width: 30%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color3);
+}
+
+.acceso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1em;
+    border: 1px solid var(--color3);
+    
+}
+
+.infocurso{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.infocurso img{
+    width: 25em;
+    border-radius: 20%;
+}
+
+.infoprincipal{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("media/imagen-fondo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
