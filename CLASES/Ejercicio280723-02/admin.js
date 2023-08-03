@@ -54,6 +54,8 @@ document.getElementById("botonAñadir").addEventListener("click", function (even
         }, 1500)
     }
     guardarAlmacenamientoLocal('alumnos', alumnos);
+
+   
 })
 
 // Editar

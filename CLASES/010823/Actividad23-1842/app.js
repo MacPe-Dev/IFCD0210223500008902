@@ -3,6 +3,7 @@ const colors = document.querySelectorAll('.colors div');
 
 let hexCodes = ['#e5031d', '#1503e5', '#15e503', '#e5ce03'];
 
+
 colors.forEach((item, i) => {
     item.addEventListener('click', () => {
         const root = document.querySelector(':root');

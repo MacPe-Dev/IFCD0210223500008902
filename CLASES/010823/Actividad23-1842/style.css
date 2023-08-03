@@ -14,7 +14,7 @@ body{
 }
 
 :root{
-    --product-img: url('img/red.png'), url('img/blue.png'), url('img/green.png'), url('img/yellow.png');
+    --product-img: url('img/red.png');
     --bg-color: #e5031d;
 }
 
