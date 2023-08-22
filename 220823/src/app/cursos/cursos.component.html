@@ -1,0 +1,38 @@
+<p>Profesor Asignado</p>
+<h2>{{nombreProfesor}}</h2>
+<img src="{{fotoProfesor}}" alt="Foto del profesor" width="100px">
+
+<!-- <p>{{alumnosAll}}</p> -->
+
+<ul>
+<li *ngFor="let listado of alumnosAll">
+    {{listado.nombreA}} - {{listado.apellidoA}} <span *ngIf="listado.estadoA != false">MATRICULADO</span>
+</li>
+
+</ul>
+
+<p>La nota media final es:</p>
+<ul [ngSwitch]="notaAlumno">
+    <li *ngSwitchCase="5">Aprobado</li>
+    <li *ngSwitchCase="4">No Aprobado</li>
+    <li *ngSwitchCase="7">Aprobado</li>
+
+
+</ul>
+
+<h2>{{nombre}}</h2>
+<h3>{{listado}}</h3>
+<ul>
+    <li>Curso HTML</li>
+    <li>Curso CSS</li>
+    <li>Curso JavaScript</li>
+</ul>
+<button (click)="cambiarTitulo()">Cambiar Título</button>
+<div class="galeria">
+<img src="{{imagen+1}}" alt="Imagen de muestra">
+<img src="{{imagen}}+imagen2.jpg" alt="Imagen de muestra">
+<img src="{{imagen+3}}" alt="Imagen de muestra">
+<img src="{{imagen+4}}" alt="Imagen de muestra">
+<img src="{{imagen+5}}" alt="Imagen de muestra">
+</div>
+
