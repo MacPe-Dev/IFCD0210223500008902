@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Aprendiendo jQuery</title>
+
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
+		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+
+		<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/06-interface.js"></script>
+		<style>
+			.elemento{
+				width: 300px;
+				height: 200px;
+				border: 4px solid black;
+				background: lightblue;
+				margin: 20px;
+				float:left;
+			}
+
+			.lista-seleccionable li{
+				width: 80%;
+				padding: 20px;
+				border: 1px solid #ccc;
+				list-style: none;
+				cursor:pointer;
+			}
+
+			ul .ui-selecting {background: green;}
+			ul .ui-selected {background: blue;}
+
+			#elemento-movido{
+				width: 100px;
+				height: 100px;
+				border: 4px solid red;
+			}
+
+			#area{
+				width: 300px;
+				height: 300px;
+				border: 4px solid green;
+			}
+
+			.elemento{	
+				background: pink;
+				float: none;
+				display: none;
+			}
+
+		</style>
+	<body>
+		<h1>Aprendiendo jQuery - victorroblesweb.es - jQuery UI</h1>
+
+		<hr/>
+		<h3>Tooltip</h3>
+
+		<a href="#"  title="Acceder a la seccion de mis datos de esta web">Mis datos</a>
+		<a href="#"  title="Logueate en esta web">Identificarse</a>
+		<a href="#"  title="Ver todos mis amigos">Amigos</a>
+
+
+		<hr/>
+
+		<h3>Cuadros de dialogo</h3>
+		<button id="lanzar-popup">Lanzame</button>
+		<div id="popup" title="¿Estas seguro?" style="display:none">
+			<p>
+				Si continuas en el curso aprenderas mucho de javascript inevitablemente
+			</p>
+		</div>
+
+
+		<hr/>
+
+
+		<h3>Calendario</h3>
+		<input type="text" id="calendario" />
+
+
+		<hr/>
+
+		<h3>Pestañas</h3>
+		<div id="pestanas">
+			<ul>
+				<li><a href="#tabs-1">Pestaña 1</a></li>
+				<li><a href="#tabs-2">Pestaña 2</a></li>
+				<li><a href="#tabs-3">Pestaña 3</a></li>
+			</ul>
+			<div id="tabs-1">
+				Hola soy la primera pestaña
+			</div>
+			<div id="tabs-2">
+				Hola soy la segunda pestaña
+			</div>
+			<div id="tabs-3">
+				Hola soy la TERCERA pestaña
+			</div>
+		</div>
+
+		<hr/>
+
+		<button id="mostrar">Mostrar</button>
+
+		<div class="caja-efectos elemento">
+		</div>
+
+		<div id="elemento-movido"></div>
+		<br>
+		<div id="area">
+		</div>
+
+		<ul class="lista-seleccionable">
+			<li>GTA 5</li>
+			<li>Need For Speed</li>
+			<li>Crash Bandicoot</li>
+			<li>Super Mario</li>
+			<li>Galaxian</li>
+		</ul>
+
+		<div class="elemento">
+			Hola, soy un elemento de la web 1
+		</div>
+
+		<div class="elemento">
+			Hola, soy un elemento de la web 2
+		</div>
+
+		<div class="elemento">
+			Hola, soy un elemento de la web 3
+		</div>
+	</body>
+</html>

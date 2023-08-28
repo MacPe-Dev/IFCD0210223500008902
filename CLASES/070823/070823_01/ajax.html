@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Aprendiendo jQuery</title>
+
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/05-ajax.js"></script>
+		<style>
+			#datos{
+				border: 2px solid green;
+				width: 250px;
+				height: 250px;
+				overflow:scroll;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Aprendiendo jQuery con victorroblesweb.es - AJAX</h1>
+
+		<form action="https://reqres.in/api/users" method="POST" id="formulario">
+			Nombre: <input type="text" name="name" />
+			Web: <input type="text" name="web" />
+			<input type="submit" value="Registrar"/>
+		</form>
+
+		<br/>
+
+		<div id="datos"></div>
+
+	</body>
+</html>
