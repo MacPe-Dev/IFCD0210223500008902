@@ -1,0 +1,33 @@
+<div>
+  <h2>Formulario de Registro</h2>
+  <form (ngSubmit)="submitForm()" #registrationForm="ngForm">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required>
+    </div>
+    <div *ngIf="registrationForm.controls['nombre'].invalid && (registrationForm.controls['nombre'].dirty || registrationForm.controls['nombre'].touched)">
+      <!-- <div *ngIf="registrationForm.controls['nombre'].errors.required">El nombre es requerido.</div> -->
+    </div>
+    
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" required email>
+    </div>
+    <div *ngIf="registrationForm.controls['email'].invalid && (registrationForm.controls['email'].dirty || registrationForm.controls['email'].touched)">
+      <!-- <div *ngIf="registrationForm.controls['email'].errors.required">El email es requerido.</div> -->
+      <div *ngIf="registrationForm.controls['email'].errors.email">El email no es válido.</div>
+    </div>
+    
+    <div>
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" [(ngModel)]="contrasena" name="contrasena" required minlength="8">
+    </div>
+    <div *ngIf="registrationForm.controls['contrasena'].invalid && (registrationForm.controls['contrasena'].dirty || registrationForm.controls['contrasena'].touched)">
+      <!-- <div *ngIf="registrationForm.controls['contrasena'].errors.required">La contraseña es requerida.</div> -->
+      <div *ngIf="registrationForm.controls['contrasena'].errors.minlength">La contraseña debe tener al menos 8 caracteres.</div>
+    </div>
+    
+    <button type="submit" [disabled]="registrationForm.invalid">Registrarse</button>
+  </form>
+</div>
+

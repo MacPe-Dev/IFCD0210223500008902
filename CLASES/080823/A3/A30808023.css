@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    min-height: 5vh;
+}
+
+.principal{
+    min-height: 90vh;
+    background-image: url('media/fondo.png');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: bottom center;
+
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: end;
+    align-items: center;
+}
+
+.puntos {
+    margin: auto;
+}
+
+footer{
+    min-height: 5vh;
+}

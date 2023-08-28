@@ -1,0 +1,49 @@
+<p>Nombre del Profesor Asignado</p>
+<h2>{{nombreProfesor}}</h2>
+<img src="{{fotoProfesor}}" alt="Foto del Alumno" width="100px">
+
+<ul>
+    <li *ngFor="let listado of alumnosall">{{listado.nombreA}} - {{listado.apellidosA}}
+        <span *ngIf="listado.estadoA != false" class="marcado"> MATRICULADO </span>
+    </li>
+    
+</ul>
+
+<p>Listado de correos de alumnos</p>
+
+<ul>
+    <li *ngFor="let listadomail of correosEle">{{listadomail}}</li>
+</ul>
+
+<p>La nota final del Alumno es: </p>
+<ul [ngSwitch]="notaAlumno">
+    <li *ngSwitchCase="5"> Aprobado</li>
+    <li *ngSwitchCase="7"> Aprobado</li>
+    <li *ngSwitchCase="9"> Aprobado</li>
+    <li *ngSwitchCase="4"> No Aprobado</li>
+
+</ul>
+
+<p>Añadir Nota</p>
+<input type="number" [(ngModel)]="Nota">
+
+<p>{{Nota}}</p>
+
+<h2>Contenido privado</h2>
+
+<div *ngIf="registrado; then Siregistrado else Noregistrado"></div>
+<!-- <div *ngIf="registrado; else Noregistrado">
+    <h3>Estas Registrado en la aplicación</h3>
+    <button (click)="unsetRegistrado()">Salir</button>
+
+</div> -->
+<ng-template #Siregistrado>
+    <p>Estas Registrado en la aplicación</p>
+    <button (click)="unsetRegistrado()">Salir</button>
+</ng-template>
+
+<ng-template #Noregistrado>
+    <p>NO estas registrado, pulsa este botón para identificarte</p>
+    <button (click)="setRegistrado()">Identificarse</button>
+</ng-template>
+

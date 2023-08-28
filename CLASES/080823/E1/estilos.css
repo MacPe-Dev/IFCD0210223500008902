@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -84,4 +85,92 @@ footer{
 }
 footer img{
     width: 15em;
+=======
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+header img{
+    width: 15em;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li{
+    margin-left: 1em;
+}
+
+header a{
+    text-decoration: none;
+    color: #000000; 
+    font-weight: 700;
+}
+
+header a:hover{
+color: #00676c;
+}
+
+#principal{
+    background-image: linear-gradient(0deg, rgba(6,224,241,.5) 0%, rgba(9,75,121,.5) 35%, rgba(0,212,255,.5) 100%), url('media/imagen-fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 40vh;
+}
+
+#principal div{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    padding-top: 6em;
+}
+
+#seccion2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+#seccion2 img{
+    width: 30em;
+}
+
+#seccion3{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    background-color: #00676c;
+    color: #ffffff;
+}
+#seccion4{
+    background-color: #cbdbeb;
+}
+#seccion4 img{
+    width: 50%;
+    margin-left: 25%;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer img{
+    width: 15em;
+>>>>>>> f52cd2f7169680ec50f47dd7a0d9c6681a1052e3
 }
