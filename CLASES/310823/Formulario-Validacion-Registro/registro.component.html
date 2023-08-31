@@ -1,0 +1,48 @@
+<form [formGroup]="contacto" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label>Nombres y Apellidos</label>
+    <input type="text" formControlName="nya" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['nya'].errors}">
+    <div *ngIf="submitted && f['nya'].errors?.['required']" class="invalid-feedback">
+      <div *ngIf="f['nya'].errors?.['required']">Por favor, ingresa tus Nombre y Apellidos</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label>Email</label>
+    <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].errors}">
+    <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+      <div *ngIf="f['email'].errors?.['required']">El email es obligatorio</div>
+      <div *ngIf="f['email'].errors?.['email']">Por favor, ingresa un Email Válido</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label>Asunto</label>
+    <input type="text" formControlName="asunto" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['asunto'].errors}">
+    <div *ngIf="submitted && f['asunto'].errors" class="invalid-feedback">
+      <div *ngIf="f['asunto'].errors?.['required']">Por favor, ingresa tu Asunto</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label>Tema:</label>
+    <select class="form-control" formControlName="tema" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['tema'].errors}">
+      <option value="">Seleccionar</option>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="TypeScript">TypeScript</option>
+      <option value="Angular">Angular</option>
+    </select>
+    <div *ngIf="submitted && f['tema'].errors" class="invalid-feedback">
+      <div *ngIf="f['tema'].errors?.['required']">Por favor, selecciona un Tema</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label>Mensaje</label>
+    <textarea class="form-control" formControlName="mensaje" rows="3" [ngClass]="{ 'is-invalid': submitted && f['mensaje'].errors}"></textarea>
+    <div *ngIf="submitted && f['mensaje'].errors" class="invalid-feedback">
+      <div *ngIf="f['mensaje'].errors?.['required']">Por favor, ingresa tu Mensaje</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary">Aceptar</button>
+  </div>
+</form>
