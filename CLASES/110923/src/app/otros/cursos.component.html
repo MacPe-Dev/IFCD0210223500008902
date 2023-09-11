@@ -1,0 +1,23 @@
+<p>cursos works!</p>
+
+<h2>{{nombre}}</h2>
+<p>{{listado}}</p>
+
+<button (click)="cambiarTitulo()">Cambiar el título del curso</button>
+
+<div class="container">
+	<h2>Cursos</h2>
+
+	<ul>
+		<li *ngFor="let curso of cursos" class="curso">
+			<a [routerLink]="['/curso', curso._id]">
+				<div class="image">
+					<img src="{{'get-image/'+curso.image}}" *ngIf="curso.image" alt="Imagen del curso"/>
+				</div>
+				<h3>{{curso.name}}</h3>
+				<p>{{curso.category}}</p>
+			</a>
+		</li>
+	</ul>
+</div>
+

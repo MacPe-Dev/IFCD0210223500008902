@@ -1,0 +1,61 @@
+<div class="container" *ngIf="curso">
+	<h2>{{title}}</h2>
+
+	<div class="message success" *ngIf="status == 'success'">
+		El curso se ha creado correctamente, puedes <a [routerLink]="['/curso', save_curso._id]">verlo aquí</a>
+	</div>
+
+	<div class="message failed" *ngIf="status == 'failed'">
+		El curso NO SE HA PODIDO CREAR
+	</div>
+
+	<form #cursoForm="ngForm" (ngSubmit)="onSubmit(cursoForm)">
+		<p>
+			<label for="name">Nombre</label>
+			<input type="text" id="name" name="name" #name="ngModel" [(ngModel)]="curso.name" required />
+			<span class="form_error" *ngIf="name.touched && !name.valid">
+				El nombre es obligatorio
+			</span>
+		</p>
+
+		<p>
+			<label for="description">Descripción</label>
+			<textarea name="description" #description="ngModel" [(ngModel)]="curso.description" required></textarea>
+			<span class="form_error" *ngIf="description.touched && !description.valid">
+				La descripción es obligatoria
+			</span>
+		</p>
+
+		<p>
+			<label for="category">Categoría</label>
+			<input type="text" name="category" #category="ngModel" [(ngModel)]="curso.category" required />
+			<span class="form_error" *ngIf="category.touched && !category.valid">
+				La categoría es obligatoria
+			</span>
+		</p>
+
+		<p>
+			<label for="duracion">Duración</label>
+			<input type="number" name="duracion" #duracion="ngModel" [(ngModel)]="curso.duracion" />
+		</p>
+
+		<p>
+			<label for="temas">Temario</label>
+			<input type="text" name="temas" #langs="ngModel" [(ngModel)]="curso.temas" required />
+			<span class="form_error" *ngIf="langs.touched && !langs.valid">
+				El Temario es obligatorios
+			</span>
+		</p>
+
+		<!-- <p>
+			<label for="image">Imagen del curso</label>
+			<span class="image" *ngIf="curso.image" style="float:none;">
+				<img src="{{'get-image/'+curso.image}}" style="width:100px;" alt="Imagen destacada de cursos"/>
+			</span><br/>
+			<input type="file" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)"/>
+		</p> -->
+
+		<input type="submit" value="Enviar" [disabled]="!cursoForm.form.valid" />
+	</form>
+</div>
+
