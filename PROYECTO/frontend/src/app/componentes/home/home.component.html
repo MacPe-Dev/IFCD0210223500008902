@@ -1,0 +1,36 @@
+
+<section class="principal">
+    <div class="container mt5">
+        <div class="row">
+            <div class="w80">
+                <div class="card">
+                  
+                    <div class="card-body curso-card">
+                        <div class=" carta card mb-3" *ngFor="let curso of listCursos" class="table">
+                          <h3 class="card-header">{{curso.nombre}}</h3>
+                          <div class="card-body">
+                            <h5 class="card-title">{{curso.descripcion}}</h5>
+                            <h6 class="card-subtitle text-muted">{{curso.categoria}}</h6>
+                          </div>
+                          
+                          <img src="{{curso.imagen}}"  alt="Imagen de los cursos">
+                          <div class="card-body">
+                            <p class="card-text">{{curso.duracion}} horas</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{curso.temas}} </li>
+                          </ul>
+                          <div class="card-body">
+                                <span><i [routerLink]="['/verCurso', curso._id]" class="fa-solid fa-eye text-secondary"></i>..más información</span>
+                          </div>
+                          <div class="card-footer text-muted">
+                            <p> Fecha de Creación : {{curso.fechaCreacion}}</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

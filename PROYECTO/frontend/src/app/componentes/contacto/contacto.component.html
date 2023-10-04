@@ -1,0 +1,62 @@
+<div class="container mt-15">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo fs-2 mb-5">{{ titulo | uppercase }}</span>
+                    <form class="mb-3 mt-3" [formGroup]="contactoForm" (ngSubmit)="agregarUsuario()">
+                        <div class="mb-3">
+                            <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
+                            <div class="text-danger" *ngIf="contactoForm.get('nombre')?.hasError('required') && contactoForm.get('nombre')?.touched">
+                                <span>El nombre es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="email" class="form-control" placeholder="Email">
+                            <div class="text-danger" *ngIf="contactoForm.get('email')?.hasError('required') && contactoForm.get('email')?.touched">
+                                <span>El email es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="telefono" class="form-control" placeholder="Teléfono">
+                            <div class="text-danger" *ngIf="contactoForm.get('telefono')?.hasError('required') && contactoForm.get('telefono')?.touched">
+                                <span>El teléfono es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="asunto" class="form-control" placeholder="Asunto">
+                            <div class="text-danger" *ngIf="contactoForm.get('asunto')?.hasError('required') && contactoForm.get('asunto')?.touched">
+                                <span>El asunto es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea type="text" formControlName="textomensaje" class="form-control" placeholder="Mensaje" cols="50" rows="10"></textarea>
+                            <div class="text-danger" *ngIf="contactoForm.get('textomensaje')?.hasError('required') && contactoForm.get('textomensaje')?.touched">
+                                <span>El mensaje es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
+                            <button type="submit" [disabled]="contactoForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class=" container mt-5 mensajeleg">
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit obcaecati ipsa consequatur dolor quam commodi nam hic esse eligendi blanditiis laborum mollitia corporis iure, aliquam nisi necessitatibus asperiores ut magnam.
+        Blanditiis facere unde architecto, a placeat sunt consectetur autem quae dolorum delectus voluptatum non eaque consequuntur earum officia. Velit consequuntur at voluptate id perspiciatis pariatur similique reprehenderit iste doloremque praesentium!
+        Eveniet atque aut quasi ullam, praesentium dicta enim optio ex quia blanditiis exercitationem necessitatibus itaque architecto ut consequuntur. Quisquam sed magni beatae. Labore, praesentium error? Quibusdam repellat autem illo consequuntur.
+        Ex, voluptate. Dolorem adipisci, est molestias eius corrupti repellendus beatae quibusdam, et aliquam sequi tenetur, aliquid esse! Quasi tempora recusandae necessitatibus voluptas nihil animi vero quidem, voluptates quisquam officiis voluptate?
+        Neque, quibusdam nulla. Dolores voluptate reprehenderit molestias perspiciatis. Totam impedit quisquam reprehenderit nemo repellendus ducimus qui, enim ipsum provident! Illum aliquam impedit corporis harum deserunt soluta ipsam, vero facere odio.
+        Quis ea impedit tempore sunt saepe officiis quasi maxime, doloribus, dolor similique quo omnis, placeat aperiam fugit exercitationem culpa aliquid. Recusandae hic molestiae, culpa ea doloribus assumenda voluptatibus at quam.
+        Hic ipsa quia distinctio culpa fugiat architecto aperiam placeat! Rem ullam quos non atque provident corrupti in aliquid ipsam ipsa quisquam sed tempora qui quae perspiciatis aperiam, at, ut optio?
+        Sunt id dolorem debitis harum dolore amet, suscipit sequi natus modi facilis eos doloribus qui quisquam sint impedit facere, temporibus quaerat corrupti? Qui eum dignissimos voluptatem ipsa laudantium delectus dicta?
+        Atque aut unde nisi alias at, distinctio cupiditate praesentium nobis voluptas vel sequi dicta iste reiciendis libero sit id tempore, illo vitae hic rerum, expedita porro quaerat quos. Voluptatum, distinctio?
+        Numquam maxime autem veritatis sit nam! Ipsa minima velit mollitia corporis ullam, ut blanditiis nam aliquam consequuntur laudantium explicabo vero ipsam ab dolorem, laborum deleniti dolorum, reprehenderit enim atque et.
+    </p>
+  </div>
+

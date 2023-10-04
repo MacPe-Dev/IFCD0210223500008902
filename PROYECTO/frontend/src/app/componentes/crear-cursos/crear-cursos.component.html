@@ -1,0 +1,53 @@
+<div class="container mt-15">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">{{ titulo | uppercase }}</span>
+                    <form class="mb-3" [formGroup]="cursoForm" (ngSubmit)="agregarCurso()">
+                        <div class="mb-3">
+                            <input type="text" formControlName="nombre" class="form-control" placeholder="Curso">
+                            <div class="text-danger" *ngIf="cursoForm.get('nombre')?.hasError('required') && cursoForm.get('nombre')?.touched">
+                                <span>El nombre es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="descripcion" class="form-control" placeholder="Descripción">
+                            <div class="text-danger" *ngIf="cursoForm.get('descripcion')?.hasError('required') && cursoForm.get('descripcion')?.touched">
+                                <span>La descripción es obligatoria</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="categoria" class="form-control" placeholder="Categoría">
+                            <div class="text-danger" *ngIf="cursoForm.get('categoria')?.hasError('required') && cursoForm.get('categoria')?.touched">
+                                <span>La Categoría es obligatoria</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="file" formControlName="imagen" class="form-control" placeholder="Imagen">
+                            <div class="text-danger" *ngIf="cursoForm.get('imagen')?.hasError('required') && cursoForm.get('imagen')?.touched">
+                                <span>La Imagen es obligatoria</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" formControlName="duracion" class="form-control" placeholder="Duración">
+                            <div class="text-danger" *ngIf="cursoForm.get('duracion')?.hasError('required') && cursoForm.get('duracion')?.touched">
+                                <span>La duración es obligatoria</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="temas" class="form-control" placeholder="Temas">
+                            <div class="text-danger" *ngIf="cursoForm.get('temas')?.hasError('required') && cursoForm.get('temas')?.touched">
+                                <span>Los temas son obligatorios</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
+                            <button type="submit" [disabled]="cursoForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.fa-solid {
+    cursor: pointer;
+    margin-left: 1em;
+
+}
+.card{
+    margin: auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.curso-card{
+    background-color: #e7e7e7;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2em;
+}
+.card-body{
+    background-color: #ffffff;
+}
+img{
+    width: 100%
+}
+button{
+    width: 25%;
+    margin: auto;
+}
+i{
+    font-size: 2em;
+}
